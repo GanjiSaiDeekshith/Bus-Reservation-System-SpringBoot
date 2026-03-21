@@ -11,6 +11,7 @@
 	<groupId>com.demo</groupId>
 	<artifactId>BusReservationApplication</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
 	<name>BusReservationApplication</name>
 	<description>Bus Reservation System - Spring Boot MVC</description>
 
@@ -47,18 +48,17 @@
 			<version>3.0.1</version>
 		</dependency>
 
+		<!-- Servlet API (provided by embedded Tomcat at runtime) -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
 		<!-- Validation -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-validation</artifactId>
-		</dependency>
-
-		<!-- DevTools -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
 		</dependency>
 
 		<!-- MySQL Driver -->
